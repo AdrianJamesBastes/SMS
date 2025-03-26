@@ -19,16 +19,7 @@ namespace SMS.app
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var student = new Student
-            {
-                StudentId = 1,
-                StudentName = "John Doe",
-                StudentEmail = "johndoe@gmail.com"
-            };
-
-            textBoxID.Text = student.StudentId.ToString();
-            textBoxName.Text = student.StudentName;
-            textBoxEmail.Text = student.StudentEmail;
+            createStudent(1, "John", "john@gmail.com");
         }
 
         private void buttonShow_Click(object sender, EventArgs e)
@@ -36,19 +27,22 @@ namespace SMS.app
             createStudent(3, "Doe John", "doejohn@gmail.com");
         }
 
-        private void createStudent(int Id,  string Name, string Email)
+        private void createStudent(int Id, string Name, string Email)
         {
             var student = new Student
             {
                 StudentId = Id,
-                StudentName =  Name,
-                StudentEmail = Email
+                StudentName = Name,
+                StudentEmail = Email,
+                DateAdded = DateTime.Now,
+                AddedBy = "Admin"
             };
 
             textBoxID.Text = student.StudentId.ToString();
             textBoxName.Text = student.StudentName;
             textBoxEmail.Text = student.StudentEmail;
-        }
-        }
 
+            labelAddedInformation.Text = $"Added by: {student.AddedBy} {student.DateAdded}";
+        }
+    }
     }

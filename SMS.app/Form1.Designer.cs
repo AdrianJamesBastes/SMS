@@ -35,6 +35,7 @@
             label2 = new Label();
             label3 = new Label();
             buttonShow = new Button();
+            labelAddedInformation = new Label();
             SuspendLayout();
             // 
             // textBoxID
@@ -96,11 +97,21 @@
             buttonShow.UseVisualStyleBackColor = true;
             buttonShow.Click += buttonShow_Click;
             // 
+            // labelAddedInformation
+            // 
+            labelAddedInformation.AutoSize = true;
+            labelAddedInformation.Location = new Point(201, 360);
+            labelAddedInformation.Name = "labelAddedInformation";
+            labelAddedInformation.Size = new Size(108, 15);
+            labelAddedInformation.TabIndex = 7;
+            labelAddedInformation.Text = "Added Information";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(628, 577);
+            Controls.Add(labelAddedInformation);
             Controls.Add(buttonShow);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -124,5 +135,6 @@
         private Label label2;
         private Label label3;
         private Button buttonShow;
+        private Label labelAddedInformation;
     }
 }
