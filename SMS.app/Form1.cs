@@ -1,4 +1,5 @@
 using SMS.domain;
+using System.ComponentModel;
 
 namespace SMS.app
 {
@@ -32,11 +33,16 @@ namespace SMS.app
 
         private void buttonShow_Click(object sender, EventArgs e)
         {
+            createStudent(3, "Doe John", "doejohn@gmail.com");
+        }
+
+        private void createStudent(int Id,  string Name, string Email)
+        {
             var student = new Student
             {
-                StudentId = 2,
-                StudentName = "Doe",
-                StudentEmail = "doe@gmail.com"
+                StudentId = Id,
+                StudentName =  Name,
+                StudentEmail = Email
             };
 
             textBoxID.Text = student.StudentId.ToString();
