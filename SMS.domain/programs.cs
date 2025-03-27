@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SMS.domain
 {
-    public class programs
+    public class Programs
     {
         [Key]
         public int ProgramId { get; set; }
