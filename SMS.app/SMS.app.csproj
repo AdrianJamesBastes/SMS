@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SMS.domain\SMS.domain.csproj" />
+    <ProjectReference Include="..\SMS.Infastructure\SMS.Infastructure.csproj" />
   </ItemGroup>
 
 </Project>
