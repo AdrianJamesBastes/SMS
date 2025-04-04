@@ -1,3 +1,6 @@
+using SMS.app.Presenters;
+using SMS.app.Views.iViews;
+
 namespace SMS.app
 {
     internal static class Program
@@ -11,7 +14,10 @@ namespace SMS.app
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            IProgramView programView = new ProgramView();
+            new ProgramPresenter(programView);
+            Application.Run((Form)programView);
         }
     }
 }
